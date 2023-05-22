@@ -1,3 +1,15 @@
+:root {
+  --white: #fff;
+  --translucent-white: #d7ccc0;
+  --light: #f5f4f0;
+  --primary: #fe8a02;
+  --primary-dark: #42413c;
+  --dark: #2a2626;
+  --translucent-dark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+}
+
 @font-face {
   font-weight: 400; /* Соответствует значению normal */
   font-family: OpenSans;
@@ -22,11 +34,32 @@
   src: url("./fonts/Neucha-Regular.ttf");
 }
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: OpenSans, sans-serif;
-  color: #2A2626;
+  color: var(--dark);
   line-height: 1.6em;
   font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
 }
 
 h1, h2, h3 {
@@ -45,18 +78,57 @@ h3 {
   font-size: 34px;
 }
 
-div {
+.container {
   max-width: 1110px;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
-header::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+.d-flex {
+  display: flex;
+}
+
+.img {
+  position: absolute;
+  height: 525px;
+  top: 55px;
+  right: -270px;
+}
+
+.text-orange {
+  color: var(--primary);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.font-text {
+  font-family: Neucha, sans-serif;
+  font-weight: 400;
+}
+
+.column {
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.flex-50 {
+  flex-basis: 50%;
+}
+
+.bg-color-light {
+  background-color: var(--light);
+}
+
+.bg-color-primary-dark {
+  background-color: var(--primary-dark);
 }
