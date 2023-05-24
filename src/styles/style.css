@@ -76,7 +76,9 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   z-index: 1;
   margin: 0;
   font-weight: inherit;
@@ -130,7 +132,7 @@ h2.card-title {
 }
 
 .image-1 {
-  filter: drop-shadow(0px 16px 32px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
   vertical-align: middle;
 }
 
@@ -140,7 +142,7 @@ h2.card-title {
 
 .text-white {
   color: var(--white);
-} 
+}
 
 .row {
   display: flex;
@@ -172,11 +174,11 @@ a.btn {
   color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #fe8a02;
+  background-color: var(--primary);
 }
 
 a.btn:hover {
-  background-color: #EA7600;
+  background-color: #ea7600;
 }
 
 .align-center {
