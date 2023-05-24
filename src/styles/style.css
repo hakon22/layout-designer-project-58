@@ -41,7 +41,7 @@
 html {
   font-family: OpenSans, sans-serif;
   color: var(--dark);
-  line-height: 1.6em;
+  line-height: 1.6;
   font-size: 16px;
 }
 
@@ -51,19 +51,38 @@ body {
   overflow-x: hidden;
 }
 
-header::before {
+.bg-image {
+  position: relative;
+}
+
+.bg-image::before {
   position: absolute;
-  content: "";
   width: 100%;
   height: 100%;
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
+  content: "";
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1110px;
+  padding: 100px 0;
+  margin: 0 auto;
 }
 
 h1, h2, h3 {
-  line-height: 1.2em;
+  z-index: 1;
+  margin: 0;
+  font-weight: inherit;
+  color: var(--primary);
+  font-family: Neucha, sans-serif;
+  line-height: 1.2;
 }
 
 h1 {
@@ -78,14 +97,29 @@ h3 {
   font-size: 34px;
 }
 
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 100px 0;
+h4 {
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: start;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
 }
 
-.d-flex {
-  display: flex;
+h4.ikea-effect {
+  background-color: var(--brown);
+  color: var(--white);
+}
+
+h4.premature-optimization {
+  background-color: var(--white);
+  color: var(--brown);
+}
+
+h2.card-title {
+  font-size: 52px;
 }
 
 .img {
@@ -95,34 +129,216 @@ h3 {
   right: -270px;
 }
 
-.text-orange {
-  color: var(--primary);
+.image-1 {
+  filter: drop-shadow(0px 16px 32px rgba(0, 0, 0, 0.15));
+  vertical-align: middle;
 }
 
 .text-dark {
   color: var(--dark);
 }
 
-.font-text {
-  font-family: Neucha, sans-serif;
-  font-weight: 400;
-}
-
-.column {
-  position: relative;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 auto;
-}
+.text-white {
+  color: var(--white);
+} 
 
 .row {
   display: flex;
   justify-content: space-between;
+}
+
+.gap-30 {
   gap: 30px;
+}
+
+.mt-185 {
+  margin-top: 185px;
 }
 
 .flex-50 {
   flex-basis: 50%;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+a.btn {
+  display: block;
+  width: 148px;
+  height: 49px;
+  padding: 12px 24px;
+  font-weight: bold;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fe8a02;
+}
+
+a.btn:hover {
+  background-color: #EA7600;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.video-section {
+  margin: 30px auto;
+}
+
+.video {
+  position: relative;
+  top: 100px;
+  margin: -100px auto;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 200px;
+}
+
+.card {
+  padding: 24px;
+  margin-bottom: 20px;
+  width: 350px;
+  font-family: Neucha, sans-serif;
+  color: var(--dark);
+  text-align: start;
+  text-decoration: none;
+  background-color: var(--light);
+}
+
+a.card > p {
+  font-family: OpenSans, sans-serif;
+}
+
+.card-title {
+  width: 350px;
+  text-align: start;
+}
+
+.card-number {
+  display: flex;
+  position: relative;
+  font-size: 64px;
+  line-height: 1;
+  padding-bottom: 40px;
+}
+
+.navigation a:hover,
+.navigation a:hover h3 {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.neucha {
+  font-family: Neucha, sans-serif;
+}
+
+.font-24 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.font-34 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+div.ikea-text p {
+  margin-top: 0;
+}
+
+.footer-text {
+  padding: 55px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 38px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.label {
+  margin-bottom: 9px;
+}
+
+.input {
+  width: 423px;
+  height: 50px;
+  padding: 15px;
+  border: 0;
+}
+
+.button {
+  display: flex;
+  width: 70px;
+  height: 50px;
+  border: 0;
+  padding: 0;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.row-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.button::before {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/send.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  content: "";
+}
+
+.rules {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.mb-26 {
+  margin-bottom: 26px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.translucent-dark {
+  color: var(--translucent-dark);
+}
+
+.translucent-white {
+  color: var(--translucent-white);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.ikea-text {
+  text-align: start;
 }
 
 .bg-color-light {
@@ -131,4 +347,8 @@ h3 {
 
 .bg-color-primary-dark {
   background-color: var(--primary-dark);
+}
+
+.bg-color-brown {
+  background-color: var(--brown);
 }
