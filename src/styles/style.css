@@ -177,7 +177,7 @@ a.btn {
   background-color: var(--primary);
 }
 
-a.btn:hover {
+a.btn:hover, .button:hover {
   background-color: #ea7600;
 }
 
